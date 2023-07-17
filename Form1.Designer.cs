@@ -44,10 +44,15 @@
             button2 = new Button();
             btnBanHang = new Button();
             panel1 = new Panel();
+            pnChildForm = new Panel();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
             pnSideMenu.SuspendLayout();
             pnQuanLySubMenu.SuspendLayout();
             pnNhapHangSubMenu.SuspendLayout();
             pnBanHangSubMenu.SuspendLayout();
+            pnChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnSideMenu
@@ -196,6 +201,7 @@
             button6.Text = "button6";
             button6.TextAlign = ContentAlignment.MiddleLeft;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // btnNhapHang
             // 
@@ -238,6 +244,7 @@
             button3.Text = "button3";
             button3.TextAlign = ContentAlignment.MiddleLeft;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -253,6 +260,7 @@
             button2.Text = "button2";
             button2.TextAlign = ContentAlignment.MiddleLeft;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // btnBanHang
             // 
@@ -278,11 +286,43 @@
             panel1.Size = new Size(250, 125);
             panel1.TabIndex = 0;
             // 
+            // pnChildForm
+            // 
+            pnChildForm.BackColor = Color.FromArgb(32, 30, 45);
+            pnChildForm.Controls.Add(label1);
+            pnChildForm.Controls.Add(pictureBox1);
+            pnChildForm.Dock = DockStyle.Fill;
+            pnChildForm.Location = new Point(250, 0);
+            pnChildForm.Name = "pnChildForm";
+            pnChildForm.Size = new Size(1332, 953);
+            pnChildForm.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(345, 472);
+            label1.Name = "label1";
+            label1.Size = new Size(91, 20);
+            label1.TabIndex = 1;
+            label1.Text = "TRANG CHỦ";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.icons8_twitter_144;
+            pictureBox1.Location = new Point(259, 210);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(203, 152);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1582, 953);
+            Controls.Add(pnChildForm);
             Controls.Add(pnSideMenu);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -291,6 +331,9 @@
             pnQuanLySubMenu.ResumeLayout(false);
             pnNhapHangSubMenu.ResumeLayout(false);
             pnBanHangSubMenu.ResumeLayout(false);
+            pnChildForm.ResumeLayout(false);
+            pnChildForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -312,5 +355,8 @@
         private Button button5;
         private Button button6;
         private Button btnNhapHang;
+        private Panel pnChildForm;
+        private PictureBox pictureBox1;
+        private Label label1;
     }
 }
